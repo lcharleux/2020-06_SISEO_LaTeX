@@ -1,0 +1,90 @@
+% UN PREMIER DOCUMENT !!
+\documentclass[a4paper, twoside]{article}
+
+% PACKAGES / LIBRAIRIES
+\usepackage[utf8]{inputenc} % Definition de l'encodage du fichier .tex
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel} % normes typographiques spécifiques à une langue.
+\usepackage{amsmath, amsfonts} % amélioration de l'affichage et de la définition des fonctions mathématiques
+
+% SETUP DU DOCUMENT
+\title{Mon premier document avec \LaTeX} % Définition du titre
+\author{L. Charleux}
+\date{Mardi 2 juin 2020}
+
+
+
+% DOCUMENT
+\begin{document}
+\maketitle % Affichage du titre
+
+
+\begin{abstract}
+Le bigorneau - mot probablement dérivé de \textbf{bigorne} dans l'acception usuelle et notamment commerciale, est le plus consommé des petits gastéropodes marins à coquille spiralée. Dans ce sens, il correspond à l'espèce Littorina littorea. Du fait de son importance économique, ce nom est compris et utilisé partout, y compris au Québec où il a fait l'objet d'une décision de normalisation par l'Office québécois de la langue française. Plus largement, la dénomination englobe les autres espèces du genre Littorina et par extension celles de la sous-famille des Littorininae, les \og littorines \fg. 
+\end{abstract}
+
+\tableofcontents % Table des matières
+
+\section*{Introduction} % le "*" veut dire que la section n'est pas numérotée
+\addcontentsline{toc}{section}{\protect\numberline{}Introduction} %On ajoute "Introduction" à la table des matières
+
+La loutre de mer ne doit pas être confondue avec la \og loutre marine \fg, Lontra felina, encore appelée chat de mer ou chungungo, qui vit le long des côtes du Pérou et du Chili et qui a besoin d'abris terrestres. 
+Il arrive aussi quelquefois que certaines loutres d'eau douce, comme la loutre d'Europe, fassent des incursions en mer (le cas est même assez fréquent dans certains pays comme en Irlande), mais leur organisme n'est pas adapté à des séjours prolongés. 
+
+Chassées intensivement à compter de 1741 pour leur fourrure (la plus dense de tous les mammifères avec jusqu'à 170 000 poils par centimètre carré), les populations de loutre de mer ont été considérablement réduites, disparaissant même de nombreuses régions de leur zone de répartition historique. 
+En 1911 on a estimé que leur population mondiale était tombée entre 1 000 et 2 000 individus. 
+Bien que plusieurs sous-espèces soient encore en danger, les loutres marines, qui sont légalement protégées, ont vu leur population fortement augmenter. Les efforts de réintroduction ont également montré des résultats positifs.
+
+
+\section{État de l'art}
+\subsection{Un truc}
+
+On considère une équation très profonde Eq. \ref{eq:math_simples} (voir page \pageref{eq:math_simples}):
+
+$$ % Ouverture d'une équation
+v(x) = \int_{0}^{+\infty} u(x) dx 
+$$ % Fermeture d'une équation
+
+\begin{align}
+& u  =   5 \\
+& v = 12
+\end{align}
+
+\begin{equation}
+2+ 2 = 4
+\label{eq:math_simples}
+\end{equation}
+
+\begin{equation}
+f(x) = \left\lbrace 
+\begin{split}
+0 \mbox{ if } x \leq 0 \\
+x^2 \mbox { otherwise}
+\end{split}
+\right.
+\end{equation}
+
+
+$$
+I_3 = 
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}
+$$
+
+$$
+\alpha \xi \Xi \phi \Psi
+$$
+
+$$
+a b c
+$$
+
+\subsection{Un autre trucs}
+
+
+\include{./section3} % On insère un autre document.
+
+\end{document}
