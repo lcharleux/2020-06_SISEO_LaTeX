@@ -1,0 +1,57 @@
+\documentclass[11pt]{beamer}
+\usetheme{Antibes}
+\usecolortheme{crane}
+%\usetheme{Bergen}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{L. Charleux}
+\title{ Des présentations avec Beamer}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+\institute{USMB} 
+\date{02 juin 2020} 
+\subject{Une alternative à PowerPoint ?} 
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Beamer: c'est comme \LaTeX ?}
+\begin{block}{Un bloc !}
+$$
+u = \int_0^{+\infty}v + \sum_0^{N-1} w
+$$
+\end{block}
+
+\begin{alertblock}{Un alertbloc !}
+\begin{itemize}
+\item Truc
+\item Bidule
+\end{itemize}
+\end{alertblock}
+
+\begin{alertblock}{Enumerate}
+\begin{enumerate}
+\item Truc
+\item Bidule
+\end{enumerate}
+
+\end{alertblock}
+
+
+\end{frame}
+
+\end{document}

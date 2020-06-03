@@ -1,0 +1,30 @@
+\documentclass[10pt,a4paper,twoside,twocolumn,titlepage]{report}
+\usepackage{my_style} % Lit le document my_style.sty
+            
+            
+\author{Ludovic}
+\title{La bibliographie avec \LaTeX}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Introduction}
+%\blindtext[1] 
+Je cite \cite{hawking1974black} et \cite{Einstein1935PR} et aussi \cite{torkabadi_constitutive_2018}. Comme le dit très bien \citet{hawking1974black} en accord avec la théorie bien connue sur le béton \citep{Einstein1935PR, torkabadi_constitutive_2018}.
+
+
+\chapter{Des choses}
+
+Je cite \cite{hawking1974black} et \cite{Einstein1935PR} et aussi \cite{torkabadi_constitutive_2018}. Comme le dit très bien \citet{hawking1974black} en accord avec la théorie bien connue sur le béton \citep{Einstein1935PR, torkabadi_constitutive_2018}.
+
+
+%\chapter{D'autres choses}
+%\blindtext[10]
+
+\bibliography{my_biblio} % Chemin d'accés au fichier .bibi (pas besoin de mettre .bib
+\bibliographystyle{abbrvnat}
+
+
+
+
+\end{document}

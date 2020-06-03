@@ -1,0 +1,65 @@
+\documentclass{report}
+\usepackage{filecontents}
+
+\begin{filecontents}{\jobname1.bib}
+@article{XQ11,
+author = {Gao, F and Liu, XQ.},
+title = {Linearized Ridge Regression Estimator Under the Mean Square Error Criterion in a Linear Regression Model},
+journal = {Communications in Statistics-Simulation and Computation},
+volume = {40},
+year = {2011},
+pages={1434-1443}}
+
+@misc{A12,
+Author = {Anneart, J. and Claes, A.G.P. and De Ceuster, M.J.K. and Zhang, H.},
+Title = {Estimating the Yield Curve Using the Nelson-Siegel Model: A Ridge Resgression Appoach},
+howpublished={International Review of Economics and Finance, Forthcoming},
+Year = {2012}}
+\end{filecontents}
+\begin{filecontents}{\jobname2.bib}
+@article{NS87,
+author = {Nelson, C. R. and Siegel, A. F},
+title = {Parsimonious Modelling of Yield Curves},
+journal = {The Journal of Business},
+volume = {60},
+issue={4},
+year = {1987},
+pages={473-489}}
+
+@misc{Sven94,
+Author = {Svensson, L.E.O},
+Title = {Estimating and Interpreting Forward Interest Rates: Sweden 1992-1994},
+howpublished={IMF Working Paper},
+note = {WP/94/114},
+Year = {1994},
+pages={1-49}}
+
+
+@article{CP01,
+Author = {Cairns, A.J.G. and Pritchard, D.J.},
+Title = {Stability of Descriptive Models for the Term Structure of Interest Rates with Applications to German Market Data},
+journal = {British Actuarial Journal},
+volume = {7},
+year = {2001},
+pages={467-507}}
+\end{filecontents}
+
+
+\usepackage[backend=biber, refsegment=chapter, defernumbers=true]{biblatex}
+
+\addbibresource[label=intro]{\jobname1.bib}
+\addbibresource[label=ridge]{\jobname2.bib}
+
+\begin{document}
+
+\chapter{Test bib 1}
+\cite{A12} (LRRE) \cite{XQ11}
+\printbibliography[segment=1,heading=subbibliography]
+
+\chapter{Test bib 2}
+\cite{NS87} and its extension by \cite{Sven94}
+\printbibliography[segment=2,heading=subbibliography]
+
+\nocite{*}
+\printbibliography
+\end{document}
