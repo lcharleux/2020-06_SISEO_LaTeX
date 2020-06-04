@@ -8,5 +8,8 @@
 *~
 *.toc
 *.mtoc
+*.nav
+*.snm
+
 
 

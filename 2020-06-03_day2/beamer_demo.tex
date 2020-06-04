@@ -1,5 +1,6 @@
-\documentclass[11pt]{beamer}
-\usetheme{Antibes}
+\documentclass[11pt]{beamer} % Options: handout = overlays aplatis a la compilation
+%\usetheme{Berkeley}
+\usetheme{Darmstadt}
 \usecolortheme{crane}
 %\usetheme{Bergen}
 
@@ -18,6 +19,8 @@
 \institute{USMB} 
 \date{02 juin 2020} 
 \subject{Une alternative à PowerPoint ?} 
+\setbeamercovered{transparent} % Ce qui est caché est grisé
+
 \begin{document}
 
 \begin{frame}
@@ -51,7 +54,84 @@ $$
 
 \end{alertblock}
 
+\end{frame}
 
+\section{Les colonnes}
+
+\begin{frame}{Les colonnes: une structure utile}
+  \begin{columns}[c] % On démarre des colonnes centrées "c"
+    \column{.5\textwidth} % On démarre une colonne de 50% de la largeur du texte dans le transparent
+    	
+    	\centering{\includegraphics[width = 1\textwidth]{figures/boar.jpg}}
+    \column{.5\textwidth} % On démarre une colonne de 50% de la largeur du texte dans le transparent
+    	\begin{block}{Le sanglier}
+    		\begin{enumerate}
+    			\item Gros
+    			\item Poilu
+    			\item Un peu laid
+    		\end{enumerate}
+    	\end{block}
+  \end{columns}
+\end{frame}
+
+\section{Les overlays}
+\subsection{Les sangliers}
+
+\begin{frame}{Rien}
+
+\end{frame}
+
+\begin{frame}{Animer avec des overlays}
+  \begin{columns}[c] % On démarre des colonnes centrées "c"
+    \column{.5\textwidth} % On démarre une colonne de 50% de la largeur du texte dans le transparent
+    	
+    	\centering{\includegraphics[width = 1\textwidth]{figures/boar.jpg}}
+    \column{.5\textwidth} % On démarre une colonne de 50% de la largeur du texte dans le transparent
+    	\begin{block}{Le sanglier}
+    		\begin{enumerate}
+    			\item<1-> Gros
+    			\item<2-> Poilu
+    			\item<3-> Un peu laid
+    		\end{enumerate}
+    	\end{block}
+  \end{columns}
+%  \only<4>{  
+%    \begin{alertblock}{Conclusion}
+%       C'est un badass !
+%    \end{alertblock}
+%  }
+    \onslide<4>{  % Pareil que \only mais ça reserve la place.
+    \begin{alertblock}{Conclusion}
+       C'est un badass !
+    \end{alertblock}
+   } 
+\end{frame}
+
+\begin{frame}{Animer avec des overlays}
+  \begin{columns}[c] % On démarre des colonnes centrées "c"
+    \column{.5\textwidth} % On démarre une colonne de 50% de la largeur du texte dans le transparent
+    	
+    	\centering{\includegraphics[width = 1\textwidth]{figures/boar.jpg}}
+    \column{.5\textwidth} % On démarre une colonne de 50% de la largeur du texte dans le transparent
+    	\begin{block}{Le sanglier}
+    		\begin{enumerate}
+    			\item<+> Gros
+				\item<+> Sauvage !    			
+    			\item<+-> Poilu
+    			\item<+> Un peu laid
+    		\end{enumerate}
+    	\end{block}
+  \end{columns}
+%  \only<4>{  
+%    \begin{alertblock}{Conclusion}
+%       C'est un badass !
+%    \end{alertblock}
+%  }
+    \onslide<4>{  % Pareil que \only mais ça reserve la place.
+    \begin{alertblock}{Conclusion}
+       C'est un badass !
+    \end{alertblock}
+   } 
 \end{frame}
 
 \end{document}
