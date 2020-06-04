@@ -10,6 +10,7 @@
 *.mtoc
 *.nav
 *.snm
-
+*.bbl
+*.xml
 
 
