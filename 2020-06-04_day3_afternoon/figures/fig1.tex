@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage{../style}
+
+\begin{document}
+
+
+\begin{tikzpicture} % Environnement pour faire un dessin avec Tikz
+  \begin{axis}[
+              xlabel = {Temps, $t$ [s]},
+              ylabel = {Amplitude, $a$ [V]},
+              title = {Fonction $a(t) = \exp(\frac{b}{t}) \sin(2\pi c t)$},
+              width = \columnwidth,
+              minor tick num = 4,
+              ymin = -1.,
+              ymax = 1.,
+              xmin = 0.,
+              ymax = 1.,
+              axis x line = bottom,
+              axis y line = left,]
+    \addplot [
+              color = blue,
+              mark = o,
+              line width = 1pt,
+             ]
+             table[x = x, 
+                   y = y,
+                   col sep = comma]{\currfiledir../data/data.csv};
+  \legend{Data}
+  \end{axis}	
+\end{tikzpicture}
+\end{document}

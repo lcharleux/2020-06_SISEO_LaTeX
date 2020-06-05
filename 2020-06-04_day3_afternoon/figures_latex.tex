@@ -1,22 +1,12 @@
-\documentclass[10pt,a4paper,twoside,twocolumn]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\usepackage{blindtext}
-\usepackage{graphicx}
-% CHARTER BT
-\usepackage[bitstream-charter]{mathdesign}
-\usepackage[T1]{fontenc}
+\documentclass[12pt,a4paper,twoside,twocolumn]{article}
+\usepackage{style}
 
 \author{Ludovic}
 \title{Des figures pour \LaTeX}
 \begin{document}
 \maketitle
+
+%\newcommand*{\CommonPath}{\currfiledir}% 
 
 \section{Données}
 
@@ -36,6 +26,13 @@
     \frame{\includegraphics[width = \columnwidth]{data/fig_python_small}}
     \caption{La petite figure.}
   \end{center}
+\end{figure}
+
+
+
+\begin{figure}
+\input{figures/fig1}
+\caption{La petite figure avec PGFPlots.}
 \end{figure}
 
 \blindtext[10]
