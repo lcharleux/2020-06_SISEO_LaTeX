@@ -1,0 +1,33 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{color}
+\usepackage[normalem]{ulem} % Pour texte barré avec \sout
+
+\title{Suivi de modif et commentaires}
+\begin{document}
+
+%\newcommand\commentLudo[1]{ {\color{blue} #1} }
+\newcommand\commentLudo[1]{}
+\newcommand\modifBob[2]{ {\color{red} \sout{#1} } { \color{green} #2} }
+
+\maketitle
+
+Le raton Laveur, ou plus exactement le raton laveur commun (Procyon lotor Linnaeus, 1758), est une espèce de mammifères omnivores de l'ordre des carnivores. \commentLudo{Je suis contre !}
+Originaire d’Amérique du Nord, cette espèce a été \modifBob{introduite}{deuxtroduite} pour la dernière fois en Europe dans les années 1930 (après la disparition un siècle plus tôt de la dernière population introduite).  \commentLudo{Je suis contre !}
+Il doit son nom à son habitude, plus ou moins réelle, de tremper ses aliments dans l’eau avant de les manger.  \commentLudo{Je suis contre !}
+L’animal, de la famille des procyonidae, est essentiellement nocturne et grimpe facilement aux arbres grâce à ses doigts agiles et à ses griffes acérées. Il a le pelage poivre et sel avec de légères teintes de roux. 
+On le reconnaît facilement à son masque noir bordé de blanc autour des yeux et à sa queue alternant anneaux clairs et noirs. 
+Le raton laveur s’adapte à de nombreux milieux naturels. 
+Opportuniste et facile à apprivoiser, il s’aventure également dans les villes nord-américaines (Canada, États-Unis). 
+Son comportement varie selon le sexe et la région où il vit. 
+\modifBob{Il est toujours chassé pour sa fourrure.}{Il est toujours chassé pour sa fourrure.}
+
+
+\end{document}
